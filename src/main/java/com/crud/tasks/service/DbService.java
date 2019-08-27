@@ -2,10 +2,16 @@ package com.crud.tasks.service;
 
 import com.crud.tasks.domain.Task;
 import com.crud.tasks.repository.TaskRepository;
+import jdk.nashorn.internal.runtime.options.Option;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+
+import java.nio.file.OpenOption;
 import java.util.List;
+import java.util.Optional;
+
 
 @Service
 public class DbService {
@@ -17,7 +23,19 @@ public class DbService {
     }
 
 
-    public List<Task> getTasksId() {
-        return repository.retrieveTasks(1);
+   // public List<Task> getTasksId() {
+     //   return repository.retrieveTasks(1);
+   // }
+
+    public Task saveTask (final Task task) {
+        return repository.save(task);
+    }
+
+    public Optional<Task> getTask (final Long id) {
+        return repository.findById(id);
+    }
+
+    public void deleteTask (final Long id) {
+        repository.deleteById(id);
     }
 }

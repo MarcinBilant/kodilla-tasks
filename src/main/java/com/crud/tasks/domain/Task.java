@@ -6,10 +6,10 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@NamedQuery(
-        name = "Task.retrieveTasks",
-        query = "FROM Task WHERE id : ID "
-)
+//@NamedQuery(
+      //  name = "Task.retrieveTasks",
+      //  query = "FROM Task WHERE id :ID"
+//)
 
 @Getter
 @AllArgsConstructor
@@ -19,9 +19,9 @@ public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(name="name")
+    @Column(name="title")
     private String title;
-    @Column(name="description")
+    @Column(name="content")
     private String content;
 
 }

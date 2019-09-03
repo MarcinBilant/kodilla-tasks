@@ -12,8 +12,8 @@ public interface TaskRepository extends CrudRepository<Task, Long> {
     @Override
     List<Task> findAll();
 
-   // @Query
-   // List<Task> retrieveTasks(@Param("ID") int id);
+    @Query
+    List<Task> retrieveTasks(@Param("ID") int id);
 
     @Override
     Task save (Task task);

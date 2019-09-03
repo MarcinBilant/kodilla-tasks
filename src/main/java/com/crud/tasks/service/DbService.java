@@ -23,9 +23,9 @@ public class DbService {
     }
 
 
-   // public List<Task> getTasksId() {
-     //   return repository.retrieveTasks(1);
-   // }
+    public List<Task> getTasksId() {
+        return repository.retrieveTasks(3);
+    }
 
     public Task saveTask (final Task task) {
         return repository.save(task);

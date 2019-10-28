@@ -29,6 +29,7 @@ public class SimpleEmailService {
 
     private SimpleMailMessage createMailMessage (final Mail mail) {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
+        mailMessage.setFrom("1");
         mailMessage.setTo(mail.getMailTo());
         mailMessage.setSubject(mail.getSubject());
         mailMessage.setText(mail.getMessage());
@@ -40,7 +41,3 @@ public class SimpleEmailService {
     }
 }
 
-// if (mail.getToCc()!=null && !mail.getToCc().equals("")) {
-//     messageHelper.setCc(mail.getToCc());
-//         LOGGER.info("CC (carbon copy) included!");
-//         }

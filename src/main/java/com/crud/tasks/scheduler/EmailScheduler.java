@@ -1,6 +1,7 @@
 package com.crud.tasks.scheduler;
 
 import com.crud.tasks.config.AdminConfig;
+import com.crud.tasks.config.CompanyConfig;
 import com.crud.tasks.domain.Mail;
 import com.crud.tasks.repository.TaskRepository;
 import com.crud.tasks.service.SimpleEmailService;
@@ -16,6 +17,7 @@ public class EmailScheduler {
     private TaskRepository taskRepository;
     @Autowired
     private AdminConfig adminConfig;
+
 
     private static final String SUBJECT = "Tasks: Once a day email";
 

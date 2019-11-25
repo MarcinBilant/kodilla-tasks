@@ -22,6 +22,9 @@ public class DbService {
     public List<Task> getAllTasks() {
         return repository.findAll();
     }
+    public long getCountTasks() {
+        return repository.count();
+    }
 
 
     public List<Task> getTasksId() {

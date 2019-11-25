@@ -50,7 +50,7 @@ public class SimpleEmailService {
             messageHelper.setFrom("1");
             messageHelper.setTo(mail.getMailTo());
             messageHelper.setSubject(mail.getSubject());
-            messageHelper.setText(mailCreatorService.buildTrelloCardEmail(mail.getMessage()), true);
+            messageHelper.setText(mailCreatorService.countTasksEmail(mail.getMessage()), true);
         };
     }
 }

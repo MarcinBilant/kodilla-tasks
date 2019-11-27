@@ -13,12 +13,11 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
 import static java.util.stream.Collectors.toList;
 
 @Component
 public class TrelloFacade {
-    private static final Logger LOGGER = LoggerFactory.getLogger(TrelloFacade.class);
+   private static final Logger LOGGER = LoggerFactory.getLogger(TrelloFacade.class);
     @Autowired
     private TrelloService trelloService;
     @Autowired
